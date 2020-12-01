@@ -18,6 +18,23 @@ export default class Day1ExpenseReportRepair extends Service.extend({
     }
     return 0;
   }
+
+  public findTheThreeEntriesThatSumTo2020(
+    expenseReportEntries: Array<number>
+  ): number {
+    for (let x = 0; x < expenseReportEntries.length - 2; x++) {
+      for (let y = x + 1; y < expenseReportEntries.length - 1; y++) {
+        for (let z = y + 1; z < expenseReportEntries.length; z++) {
+          if (expenseReportEntries[x] + expenseReportEntries[y]+ expenseReportEntries[z] === 2020) {
+            const multipliedResult = expenseReportEntries[x] * expenseReportEntries[y] * expenseReportEntries[z];
+            console.log(`${expenseReportEntries[x]} + ${expenseReportEntries[y]} + ${expenseReportEntries[z]} = 2020, multiplied result = ${multipliedResult}.`);
+            return multipliedResult;
+          }
+        }
+      }
+    }
+    return 0;
+  }
 }
 
 // DO NOT DELETE: this is how TypeScript knows how to look up your services.
