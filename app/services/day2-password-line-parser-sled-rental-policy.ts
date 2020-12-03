@@ -1,5 +1,5 @@
 
-export default class Day2PasswordLineParser {
+export default class Day2PasswordLineParserSledRentalPolicy {
   minumumCount: number;
   maximumCount: number;
   characterToCount: string;

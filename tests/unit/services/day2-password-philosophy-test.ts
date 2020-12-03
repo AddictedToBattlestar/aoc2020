@@ -9,14 +9,25 @@ module('Unit | Service | day2-password-philosophy', function (hooks) {
     service = this.owner.lookup("service:day2-password-philosophy");
   });
 
-  test('it solves the example provided from aoc', function (assert) {
-    const result = service.getCountOfValidPasswords(exampleData);
+  test('it solves the example provided from aoc for part 1', function (assert) {
+    const result = service.getCountOfValidPasswordsForSledRentals(exampleData);
     assert.equal(result, 2);
   });
 
-  test('it solves the example provided from aoc', function (assert) {
-    const result = service.getCountOfValidPasswords(part1Data);
+  test('it solves for part 1', function (assert) {
+    const result = service.getCountOfValidPasswordsForSledRentals(sourceData);
     console.log(`The answer to part 1 is: ${result}`);
+    assert.ok(result);
+  });
+
+  test('it solves the example provided from aoc for part 2', function (assert) {
+    const result = service.getCountOfValidPasswordsForTobogganRentals(exampleData);
+    assert.equal(result, 1);
+  });
+
+  test('it solves for part 2', function (assert) {
+    const result = service.getCountOfValidPasswordsForTobogganRentals(sourceData);
+    console.log(`The answer to part 2 is: ${result}`);
     assert.ok(result);
   });
 
@@ -26,7 +37,7 @@ module('Unit | Service | day2-password-philosophy', function (hooks) {
     2-9 c: ccccccccc
   `).trim().split("\n").map(l => l.trim());
 
-  const part1Data: string[] = (`
+  const sourceData: string[] = (`
   1-4 m: mrfmmbjxr
   5-16 b: bbbbhbbbbpbxbbbcb
   7-8 x: qxrxmxccxxx
