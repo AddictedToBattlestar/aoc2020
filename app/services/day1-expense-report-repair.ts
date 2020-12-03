@@ -11,7 +11,7 @@ export default class Day1ExpenseReportRepair extends Service.extend({
       for (let y = x + 1; y < expenseReportEntries.length; y++) {
         if (expenseReportEntries[x] + expenseReportEntries[y] === 2020) {
           const multipliedResult = expenseReportEntries[x] * expenseReportEntries[y];
-          console.log(`${expenseReportEntries[x]} + ${expenseReportEntries[y]} = 2020, multiplied result = ${multipliedResult}\n`);
+          console.log(`Day 1: ${expenseReportEntries[x]} + ${expenseReportEntries[y]} = 2020, multiplied result = ${multipliedResult}\n`);
           return multipliedResult;
         }
       }
@@ -27,7 +27,7 @@ export default class Day1ExpenseReportRepair extends Service.extend({
         for (let z = y + 1; z < expenseReportEntries.length; z++) {
           if (expenseReportEntries[x] + expenseReportEntries[y]+ expenseReportEntries[z] === 2020) {
             const multipliedResult = expenseReportEntries[x] * expenseReportEntries[y] * expenseReportEntries[z];
-            console.log(`${expenseReportEntries[x]} + ${expenseReportEntries[y]} + ${expenseReportEntries[z]} = 2020, multiplied result = ${multipliedResult}.\n`);
+            console.log(`Day 1: ${expenseReportEntries[x]} + ${expenseReportEntries[y]} + ${expenseReportEntries[z]} = 2020, multiplied result = ${multipliedResult}.\n`);
             return multipliedResult;
           }
         }
