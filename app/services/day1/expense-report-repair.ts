@@ -40,6 +40,6 @@ export default class Day1ExpenseReportRepair extends Service.extend({
 // DO NOT DELETE: this is how TypeScript knows how to look up your services.
 declare module "@ember/service" {
   interface Registry {
-    "day1-expense-report-repair": Day1ExpenseReportRepair;
+    "day1/expense-report-repair": Day1ExpenseReportRepair;
   }
 }

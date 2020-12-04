@@ -31,6 +31,6 @@ export default class Day2PasswordPhilosophy extends Service.extend({
 // DO NOT DELETE: this is how TypeScript knows how to look up your services.
 declare module '@ember/service' {
   interface Registry {
-    'day2-password-philosophy': Day2PasswordPhilosophy;
+    'day2/password-philosophy': Day2PasswordPhilosophy;
   }
 }

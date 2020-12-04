@@ -6,7 +6,7 @@ module('Unit | Service | day2-password-philosophy', function (hooks) {
   let service: any;
 
   hooks.beforeEach(function () {
-    service = this.owner.lookup("service:day2-password-philosophy");
+    service = this.owner.lookup("service:day2/password-philosophy");
   });
 
   test('it solves the example provided from aoc for part 1', function (assert) {

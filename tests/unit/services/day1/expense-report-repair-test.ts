@@ -6,7 +6,7 @@ module("Unit | Service | day1-expense-report-repair", function (hooks) {
   let service: any;
 
   hooks.beforeEach(function () {
-    service = this.owner.lookup("service:day1-expense-report-repair");
+    service = this.owner.lookup("service:day1/expense-report-repair");
   });
 
   test("it solves the example provided from aoc", function (assert) {
