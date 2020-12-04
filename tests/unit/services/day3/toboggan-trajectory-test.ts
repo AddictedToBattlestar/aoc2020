@@ -24,6 +24,25 @@ module('Unit | Service | day3/toboggan-trajectory', function(hooks) {
     assert.ok(result);
   });
 
+  test('it solves the example provided from aoc for part 2', function (assert) {
+    let result = service.runWithSlope(exampleData, 1, 1);
+    result *= service.runWithSlope(exampleData, 3, 1);
+    result *= service.runWithSlope(exampleData, 5, 1);
+    result *= service.runWithSlope(exampleData, 7, 1);
+    result *= service.runWithSlope(exampleData, 1, 2);
+    assert.equal(result, 336);
+  });
+
+  test('it solves for part 2', function (assert) {
+    let result = service.runWithSlope(sourceData, 1, 1);
+    result *= service.runWithSlope(sourceData, 3, 1);
+    result *= service.runWithSlope(sourceData, 5, 1);
+    result *= service.runWithSlope(sourceData, 7, 1);
+    result *= service.runWithSlope(sourceData, 1, 2);
+    console.log(`Day 3: The answer to part 2 is: ${result}\n`);
+    assert.ok(result);
+  });
+
   const exampleData: string[] = (`
   ..##.......
   #...#...#..
