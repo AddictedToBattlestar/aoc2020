@@ -13,10 +13,15 @@ module('Unit | Service | day3/toboggan-trajectory', function(hooks) {
     assert.equal(result, 7);
   });
 
+  test('it solves my own example', function (assert) {
+    const result = service.runWithSlope(example2Data, 2, 1);
+    assert.equal(result, 3);
+  });
+
   test('it solves for part 1', function (assert) {
     const result = service.runWithSlope(sourceData, 3, 1);
     console.log(`Day 3: The answer to part 1 is: ${result}\n`);
-    assert.ok(result); // I get 264 which aoc is saying is too low... :P
+    assert.ok(result);
   });
 
   const exampleData: string[] = (`
@@ -31,6 +36,15 @@ module('Unit | Service | day3/toboggan-trajectory', function(hooks) {
   #.##...#...
   #...##....#
   .#..#...#.#
+  `).trim().split("\n").map(l => l.trim());
+
+  const example2Data: string[] = (`
+  #..#
+  #..#
+  #..#
+  #..#
+  #..#
+  #..#
   `).trim().split("\n").map(l => l.trim());
 
   const sourceData: string[] = (`
