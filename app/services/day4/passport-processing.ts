@@ -30,7 +30,6 @@ export default class Day4PassportProcessing extends Service.extend({
   }
 
   private isPassportValid(passport: any, isUsingRevisedValidation: boolean) {
-    debugger;
     if (isUsingRevisedValidation) {
       const isByrValid = passport["byr"] && this.isYearValid(passport["byr"], 1920, 2002);
       const isIyrValid = passport["iyr"] && this.isYearValid(passport["iyr"], 2010, 2020);
