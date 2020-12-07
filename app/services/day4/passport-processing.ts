@@ -3,17 +3,17 @@ import Service from '@ember/service';
 export default class Day4PassportProcessing extends Service.extend({
 }) {
   public countValidPassports(passportData: Array<string>, isUsingRevisedValidation: boolean): number {
-    console.log(`Day 4, passportData: "${passportData}"`);
+    console.log(`-Day 4- passportData: "${passportData}"`);
     let currentPassport: any = {};
     let validPassportCount = 0;
     for (let passportDataLine of passportData) {
-      console.log(`Day 4, processing line: "${passportDataLine}"`);
+      console.log(`-Day 4- processing line: "${passportDataLine}"`);
       if (passportDataLine.length === 0) {
         if (this.isPassportValid(currentPassport, isUsingRevisedValidation)) {
           validPassportCount++;
-          console.log("passport valid");
+          console.log("-Day 4- passport valid");
         } else {
-          console.log("passport NOT valid");
+          console.log("-Day 4- passport NOT valid");
         }
         currentPassport = {};
       } else {

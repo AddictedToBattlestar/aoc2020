@@ -16,7 +16,7 @@ module('Unit | Service | day2-password-philosophy', function (hooks) {
 
   test('it solves for part 1', function (assert) {
     const result = service.getCountOfValidPasswordsForSledRentals(sourceData);
-    console.log(`Day 2: The answer to part 1 is: ${result}\n`);
+    console.log(`-Day 2- The answer to part 1 is: ${result}\n`);
     assert.ok(result);
   });
 
@@ -27,7 +27,7 @@ module('Unit | Service | day2-password-philosophy', function (hooks) {
 
   test('it solves for part 2', function (assert) {
     const result = service.getCountOfValidPasswordsForTobogganRentals(sourceData);
-    console.log(`Day 2: The answer to part 2 is: ${result}\n`);
+    console.log(`-Day 2- The answer to part 2 is: ${result}\n`);
     assert.ok(result);
   });
 
