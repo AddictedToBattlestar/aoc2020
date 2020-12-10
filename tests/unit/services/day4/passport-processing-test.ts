@@ -16,7 +16,7 @@ module('Unit | Service | day4/passport-processing', function(hooks) {
 
   test('it solves for part 1', function (assert) {
     const result = service.countValidPassports(sourceData, false);
-    console.log(`-Day 4- The answer to part 1 is: ${result}\n`);
+    console.info(`-Day 4- The answer to part 1 is: ${result}\n`);
     assert.ok(result);
   });
 
@@ -32,7 +32,7 @@ module('Unit | Service | day4/passport-processing', function(hooks) {
 
   test('it solves for part 2', function (assert) {
     const result = service.countValidPassports(sourceData, true);
-    console.log(`-Day 4- The answer to part 2 is: ${result}\n`);
+    console.info(`-Day 4- The answer to part 2 is: ${result}\n`);
     assert.ok(result);
   });
 

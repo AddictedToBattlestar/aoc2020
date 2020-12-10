@@ -26,7 +26,7 @@ module('Unit | Service | day5/boarding-pass-parser', function(hooks) {
 
   test('it solves for part 1', function (assert) {
     const result = service.findHighestSeatId(sourceData);
-    console.log(`-Day 5- The answer to part 1 is: ${result}\n`);
+    console.info(`-Day 5- The answer to part 1 is: ${result}\n`);
     assert.ok(result);
   });
 

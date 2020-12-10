@@ -6,7 +6,7 @@ export default class Day8HandheldHalting extends Service.extend({
     try {
       return this.processAndGetAccumulator(instructionCodesRaw);
     } catch (error) {
-      console.log(error.message);
+      console.info(error.message);
       return error.accumulatorValueAtTimeOfError;
     }
   }
@@ -27,10 +27,10 @@ export default class Day8HandheldHalting extends Service.extend({
         }
         try {
           const result = this.processAndGetAccumulator(clonedInstructionCodesRaw);
-          console.log(`SUCCESSFULLY replaced the instruction on line ${i + 1} and the accumulator value result was ${result}.`)
+          console.info(`SUCCESSFULLY replaced the instruction on line ${i + 1} and the accumulator value result was ${result}.`)
           return result;
         } catch (error) {
-            console.log(`Tried replacing the instruction on line ${i + 1} without success.`)
+            console.info(`Tried replacing the instruction on line ${i + 1} without success.`)
         }
       }
     }

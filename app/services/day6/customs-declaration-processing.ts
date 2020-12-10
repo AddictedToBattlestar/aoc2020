@@ -9,7 +9,7 @@ export default class Day6CustomsDeclarationProcessing extends Service.extend({
       numberOfPeopleInGroup: 0
     }
     for (let declarationAnswerLine of answersForCustomsDeclarations) {
-      console.log(`-Day 6- processing line: "${declarationAnswerLine}"`);
+      console.info(`-Day 6- processing line: "${declarationAnswerLine}"`);
       if (declarationAnswerLine === "") {
         this.processGroupAnswers(state, whereAllAnswersInGroupAreYes);
       } else {
@@ -36,7 +36,7 @@ export default class Day6CustomsDeclarationProcessing extends Service.extend({
     }
 
     state.totalDistinctAnswersInAllDeclarations += distinctAnswerCountInGroup;
-    console.log(`-Day 6- Group processing terminated.  Distinct count of answers in group: ${distinctAnswerCountInGroup}.  Current total count: ${state.totalDistinctAnswersInAllDeclarations}`)
+    console.info(`-Day 6- Group processing terminated.  Distinct count of answers in group: ${distinctAnswerCountInGroup}.  Current total count: ${state.totalDistinctAnswersInAllDeclarations}`)
     state.currentGroupAnswers = {};
     state.numberOfPeopleInGroup = 0;
   }

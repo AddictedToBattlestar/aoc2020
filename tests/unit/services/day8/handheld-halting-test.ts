@@ -17,7 +17,7 @@ module('Unit | Service | day8/handheld-halting', function(hooks) {
   test('it solves for part 1', function (assert) {
     const result = service.getAccumulatorValuePriorToRepetition(sourceData);
     assert.equal(result, 1584);
-    console.log(`-Day 8- The answer to part 1 is: ${result}\n`);
+    console.info(`-Day 8- The answer to part 1 is: ${result}\n`);
   });
 
   test('it solves the example provided from aoc for part 2', function (assert) {
@@ -29,7 +29,7 @@ module('Unit | Service | day8/handheld-halting', function(hooks) {
     const result = service.fixBadInstructionAndGetAccumulatorValue(sourceData);
     assert.notEqual(result, 0);
     if (result != 0) {
-      console.log(`-Day 8- The answer to part 2 is: ${result}\n`);
+      console.info(`-Day 8- The answer to part 2 is: ${result}\n`);
     }
   });
 

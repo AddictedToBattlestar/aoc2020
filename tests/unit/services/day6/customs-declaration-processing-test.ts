@@ -16,7 +16,7 @@ module('Unit | Service | day6/customs-declaration-processing', function(hooks) {
 
   test('it solves for part 1', function (assert) {
     const result = service.countValidCustomDeclarationsByGroup(sourceData);
-    console.log(`-Day 6- The answer to part 1 is: ${result}\n`);
+    console.info(`-Day 6- The answer to part 1 is: ${result}\n`);
     assert.ok(result);
   });
 
@@ -27,7 +27,7 @@ module('Unit | Service | day6/customs-declaration-processing', function(hooks) {
 
   test('it solves for part 2', function (assert) {
     const result = service.countValidCustomDeclarationsByGroup(sourceData, true);
-    console.log(`-Day 6- The answer to part 2 is: ${result}\n`);
+    console.info(`-Day 6- The answer to part 2 is: ${result}\n`);
     assert.ok(result);
   });
 
