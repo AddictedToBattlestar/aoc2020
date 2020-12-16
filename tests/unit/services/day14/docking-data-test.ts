@@ -45,6 +45,17 @@ module('Unit | Service | day14/docking-data', function(hooks) {
     assert.equal(result, 208);
   });
 
+  test('it solves for part 2 for day 14', function (assert) {
+    const result = service.getSumOfAllValuesVersion2(sourceData);
+    assert.ok(result);
+    if (result != 0) {
+      console.info(`-Day 14- The answer to part 2 is: ${result}\n`);
+    }
+    /*
+    It's not 7438173613357 (too low apparently)
+    */
+  });
+
   const exampleData: Array<string> = (`
   mask = XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1XXXX0X
   mem[8] = 11

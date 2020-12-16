@@ -14,6 +14,7 @@ export default class Day14DockingData extends Service.extend({
         const valueProvided = Number(parsedLineData[1]);
         const memoryLocation = Number(parsedLineData[0].substring(parsedLineData[0].indexOf("[") + 1, parsedLineData[0].length - 1));
         const memoryLocationsToStore: Array<number> = this.getResultingMemoryLocations(memoryLocation, mask);
+        console.debug(`memory locations to store the value ${valueProvided} are ${memoryLocationsToStore}`);
         memoryLocationsToStore.forEach(memoryLocation => {
           dataStorage[memoryLocation] = valueProvided;
         })
@@ -31,8 +32,9 @@ export default class Day14DockingData extends Service.extend({
         if (i >= binaryString.length) {
           this.expandString(binaryString, i);
         }
-        binaryString[i] = maskArray[i];
+        binaryString[i] = maskArray[i] === "0" ? binaryString[i] : maskArray[i];
     }
+
     let arrayOfMemoryLocations: Array<Array<string>> = [];
     arrayOfMemoryLocations.push(binaryString)
     for (let i = 0; i < binaryString.length; i++) {
@@ -60,7 +62,6 @@ export default class Day14DockingData extends Service.extend({
     });
     return toReturn;
   }
-
 
   public getSumOfAllValues(initializationData: Array<string>): number {
     let dataStorage: Array<number> = [];
