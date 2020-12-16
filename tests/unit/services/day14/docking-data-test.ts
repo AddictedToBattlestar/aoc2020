@@ -35,14 +35,6 @@ module('Unit | Service | day14/docking-data', function(hooks) {
     if (result != 0) {
       console.info(`-Day 14- The answer to part 1 is: ${result}\n`);
     }
-    /*
-    It's not 7438173613357 (too low apparently)
-    */
-  });
-
-  test('it solves the example provided from aoc for part 2 on day 14', function (assert) {
-    const result = service.getSumOfAllValuesVersion2(exampleDataPart2);
-    assert.equal(result, 208);
   });
 
   const exampleData: Array<string> = (`
@@ -50,13 +42,6 @@ module('Unit | Service | day14/docking-data', function(hooks) {
   mem[8] = 11
   mem[7] = 101
   mem[8] = 0
-  `).trim().split("\n").map(l => l.trim());
-
-  const exampleDataPart2: Array<string> = (`
-  mask = 000000000000000000000000000000X1001X
-  mem[42] = 100
-  mask = 00000000000000000000000000000000X0XX
-  mem[26] = 1
   `).trim().split("\n").map(l => l.trim());
 
   const sourceData: Array<string> = (`

@@ -12,12 +12,12 @@ export default class Day5BoardingPassParser extends Service.extend({
       } else {
         lowerRowNumber += numberOfSeatsToDeduct;
       }
-      console.info(`-Day 5- Position ${i + 1}, value: ${boardingPassSeatInformation[i]}, lowerRowNumber: ${lowerRowNumber}, upperRowNumber: ${upperRowNumber}`);
+      console.debug(`-Day 5- Position ${i + 1}, value: ${boardingPassSeatInformation[i]}, lowerRowNumber: ${lowerRowNumber}, upperRowNumber: ${upperRowNumber}`);
     }
     if (lowerRowNumber !== upperRowNumber) {
       console.error(`-Day 5- The upper and lower bounds for the row being determined could not be found. (lowerRowNumber: ${lowerRowNumber}, upperRowNumber: ${upperRowNumber})`)
     }
-    console.info(`-Day 5- Boarding pass is for row number ${lowerRowNumber}`);
+    console.debug(`-Day 5- Boarding pass is for row number ${lowerRowNumber}`);
 
     let leftMostSeatNumber = 0;
     let rightMostSeatNumber = 7;
@@ -29,14 +29,14 @@ export default class Day5BoardingPassParser extends Service.extend({
       } else {
         leftMostSeatNumber += numberOfSeatsToDeduct;
       }
-      console.info(`-Day 5- Position ${i + 1}, value: ${boardingPassSeatInformation[i]}, leftMostSeatNumber: ${leftMostSeatNumber}, rightMostSeatNumber: ${rightMostSeatNumber}`);
+      console.debug(`-Day 5- Position ${i + 1}, value: ${boardingPassSeatInformation[i]}, leftMostSeatNumber: ${leftMostSeatNumber}, rightMostSeatNumber: ${rightMostSeatNumber}`);
     }
     if (leftMostSeatNumber !== rightMostSeatNumber) {
       console.error(`-Day 5- The left and right bounds for the seat being determined could not be found. (leftMostSeatNumber: ${leftMostSeatNumber}, rightMostSeatNumber: ${rightMostSeatNumber})`)
     }
-    console.info(`-Day 5- Boarding pass is for seat number ${leftMostSeatNumber}`);
+    console.debug(`-Day 5- Boarding pass is for seat number ${leftMostSeatNumber}`);
     const seatId: number = lowerRowNumber * 8 + leftMostSeatNumber;
-    console.info(`-Day 5- The seat ID for ${boardingPassSeatInformation} was found to be ${seatId}`);
+    console.debug(`-Day 5- The seat ID for ${boardingPassSeatInformation} was found to be ${seatId}`);
     return seatId;
   }
   public findHighestSeatId(boardingPassSeatListing: Array<string>): number | undefined {
@@ -57,7 +57,7 @@ export default class Day5BoardingPassParser extends Service.extend({
     const sortedSeatIds: Array<number> = seatIds.sort((s1: number, s2: number) => {return s1 - s2});
     for (let i = 1; i < sortedSeatIds.length; i++) {
       if (sortedSeatIds[i] - sortedSeatIds[i - 1] !== 1) {
-        console.info(`-Day 5- A seat gap was found for seat ID's ${sortedSeatIds[i - 1]} & ${sortedSeatIds[i]}`);
+        console.debug(`-Day 5- A seat gap was found for seat ID's ${sortedSeatIds[i - 1]} & ${sortedSeatIds[i]}`);
       }
     }
   }

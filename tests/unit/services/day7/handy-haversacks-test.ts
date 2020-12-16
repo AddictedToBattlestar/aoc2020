@@ -18,7 +18,7 @@ module('Unit | Service | day7/handy-haversacks', function (hooks) {
     const result = service.countParents("shiny", "gold", sourceData);
     assert.ok(result);
     if (result) {
-      console.log(`-Day 7- The answer to part 1 is: ${result}\n`);
+      console.info(`-Day 7- The answer to part 1 is: ${result}\n`);
     }
   });
 
@@ -31,7 +31,7 @@ module('Unit | Service | day7/handy-haversacks', function (hooks) {
     const result = service.countBagsWithin("shiny", "gold", sourceData);
     assert.ok(result);
     if (result) {
-      console.log(`-Day 7- The answer to part 2 is: ${result}\n`);
+      console.info(`-Day 7- The answer to part 2 is: ${result}\n`);
     }
   });
 
