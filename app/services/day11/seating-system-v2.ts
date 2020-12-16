@@ -154,6 +154,7 @@ export default class Day11SeatingSystemV2 extends Service.extend({}) {
       }
       x--;
     }
+    return false;
   }
 
   private isRightOccupied(currentRoundLayout: Array<Array<string>>, x: number, y: number): boolean  {
@@ -164,6 +165,7 @@ export default class Day11SeatingSystemV2 extends Service.extend({}) {
       }
       x++;
     }
+    return false;
   }
 
   private isLowerLeftOccupied(currentRoundLayout: Array<Array<string>>, x: number, y: number): boolean {
