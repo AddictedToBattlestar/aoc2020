@@ -18,7 +18,6 @@ export default class Day9EncodingError extends Service.extend({
     for(let i = 0; i < encodedData.length; i++) {
       let runningTotal = encodedData[i];
       let j = i + 1;
-      debugger;
       while (runningTotal < encodingErrorValue && j < encodedData.length) {
         runningTotal += encodedData[j];
         if (runningTotal === encodingErrorValue) {
