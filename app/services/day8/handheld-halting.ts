@@ -30,7 +30,7 @@ export default class Day8HandheldHalting extends Service.extend({
           console.info(`SUCCESSFULLY replaced the instruction on line ${i + 1} and the accumulator value result was ${result}.`)
           return result;
         } catch (error) {
-            console.error(`Tried replacing the instruction on line ${i + 1} without success.`)
+            console.debug(`Tried replacing the instruction on line ${i + 1} without success.`)
         }
       }
     }
