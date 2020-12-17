@@ -43,13 +43,6 @@ export default class Day14DockingData extends Service.extend({
     }
   }
 
-
-  private expandString(binaryString: Array<string>, lengthNeeded: number) {
-    for(let i = binaryString.length; i <= lengthNeeded; i++) {
-      binaryString.push("0");
-    }
-  }
-
   private getBinaryArray(base10Value: number): Array<number> {
     let binaryArray: Array<number> = [];
     do {

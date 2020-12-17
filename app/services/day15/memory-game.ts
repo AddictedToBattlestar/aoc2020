@@ -2,7 +2,7 @@ import Service from '@ember/service';
 
 export default class Day15MemoryGame extends Service.extend({
 }) {
-  private play(startingNumbers: Array<number>, terminatingTurn: number): number {
+  public play(startingNumbers: Array<number>, terminatingTurn: number): number {
     let turnTracker: Map<number, Array<number>> = new Map();
     for (let turnNumber = 0; turnNumber < startingNumbers.length; turnNumber++) {
       turnTracker.set(startingNumbers[turnNumber],[turnNumber]);
