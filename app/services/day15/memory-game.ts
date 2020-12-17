@@ -10,7 +10,6 @@ export default class Day15MemoryGame extends Service.extend({
     }
     let lastNumberSpoken: number = startingNumbers[startingNumbers.length - 1];
     for (let turnNumber = startingNumbers.length; turnNumber < terminatingTurn; turnNumber++) {
-      debugger;
       let turnPreviouslySpoken: Array<number> | undefined = turnTracker.get(lastNumberSpoken);
       if (turnPreviouslySpoken && turnPreviouslySpoken.length > 1) {
         let nextNumberBeingSpoken: number = turnPreviouslySpoken[turnPreviouslySpoken.length - 1] - turnPreviouslySpoken[turnPreviouslySpoken.length - 2];
