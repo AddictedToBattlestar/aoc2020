@@ -9,7 +9,7 @@ module('Unit | Service | day12/navigation', function(hooks) {
     service = this.owner.lookup('service:day12/navigation');
   });
 
-  test('it solves example 1 provided from aoc for part 1 on day 15', function (assert) {
+  test('it solves example 1 provided from aoc for part 1', function (assert) {
     const result = service.goAndGetDistance(exampleData);
     assert.equal(result, 25);
   });
@@ -18,6 +18,17 @@ module('Unit | Service | day12/navigation', function(hooks) {
     const result = service.goAndGetDistance(sourceData);
     assert.ok(result);
     console.info(`-Day 12- The answer to part 1 is: ${result}\n`);
+  });
+
+  test('it solves example 1 provided from aoc for part 2 for day 12', function (assert) {
+    const result = service.goAndGetDistanceV2(exampleData);
+    assert.equal(result, 286);
+  });
+
+  test('it solves for part 2', function (assert) {
+    const result = service.goAndGetDistanceV2(sourceData);
+    assert.ok(result);
+    console.info(`-Day 12- The answer to part 2 is: ${result}\n`);
   });
 
   const exampleData: Array<string> = (`
